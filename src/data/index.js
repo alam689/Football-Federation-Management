@@ -549,7 +549,7 @@
     L({ name:'Rumi', era:'silver', pos:'MF', years:'1988–1998', caps:30, goals:5, no:8, note:'Midfield engine of the 1990s national side.' }),
     L({ name:'Golam Gaus', era:'found', pos:'DF', years:'1972–1979', caps:22, goals:1, no:4, note:'Member of the very first post-independence national team.' }),
     L({ name:'Pratap Shankar Hazra', era:'found', pos:'MF', years:'1973–1980', caps:24, goals:4, no:6, note:'Early national-team mainstay and captain.' }),
-    L({ name:'Aminul Haque', era:'saff', pos:'GK', years:'1995–2011', caps:55, goals:0, no:1, note:'Goalkeeper & captain of the 2003 SAFF-winning team.', icon:'shield', hof:true }),
+    L({ name:'Aminul Haque', era:'saff', pos:'GK', years:'1995–2011', caps:55, goals:0, no:1, note:'Goalkeeper & captain of the 2003 SAFF-winning team.', icon:'shield', hof:true, photo:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Md._Aminul_Haque%2C_Youth_and_Sports_Minister%2C_presents_Arafat_Rahman_Koko_Memorial_Award_at_Le_M%C3%A9ridien_Dhaka%2C_2026-03-01_%28cropped%29.jpg/330px-Md._Aminul_Haque%2C_Youth_and_Sports_Minister%2C_presents_Arafat_Rahman_Koko_Memorial_Award_at_Le_M%C3%A9ridien_Dhaka%2C_2026-03-01_%28cropped%29.jpg' }),
     L({ name:'Arif Khan Joy', era:'saff', pos:'MF', years:'1999–2008', caps:42, goals:9, no:11, note:'Scored the winner that sealed 2003 SAFF glory.', hof:true }),
     L({ name:'Alfaz Ahmed', era:'saff', pos:'FW', years:'1996–2007', caps:39, goals:14, no:9, note:'Lethal finisher of the SAFF-champion generation.' }),
     L({ name:'Rajani Kanta Barman', era:'saff', pos:'DF', years:'2001–2011', caps:44, goals:2, no:5, note:'Commanding centre-back of the 2000s.' }),
