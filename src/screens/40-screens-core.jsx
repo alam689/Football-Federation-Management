@@ -932,7 +932,7 @@ function Pitch({ team, go }) {
     </div>
   ) : <div style={{ width:54 }}></div>;
   return (
-    <div style={{ background:'linear-gradient(180deg,#0a7d5b,#055a40)', borderRadius:12, padding:'16px 8px', position:'relative', aspectRatio:'3/4', display:'flex', flexDirection:'column', justifyContent:'space-between', backgroundImage:'repeating-linear-gradient(180deg,#0a7d5b 0 32px,#0c8865 32px 64px)' }}>
+    <div style={{ background:'linear-gradient(180deg,#2c5f92,#17324f)', borderRadius:12, padding:'16px 8px', position:'relative', aspectRatio:'3/4', display:'flex', flexDirection:'column', justifyContent:'space-between', backgroundImage:'repeating-linear-gradient(180deg,#2c5f92 0 32px,#34719f 32px 64px)' }}>
       <div style={{ position:'absolute', inset:8, border:'2px solid #ffffff44', borderRadius:8, pointerEvents:'none' }}></div>
       <div style={{ position:'absolute', left:'50%', top:'50%', width:60, height:60, border:'2px solid #ffffff33', borderRadius:'50%', transform:'translate(-50%,-50%)' }}></div>
       {[...rows].reverse().map((r,i)=>(

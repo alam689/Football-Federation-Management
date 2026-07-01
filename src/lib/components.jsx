@@ -43,6 +43,13 @@ const I = {
   cap:'M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5M22 10v6',
   award:'M12 15a7 7 0 100-14 7 7 0 000 14zM8.2 13.5L7 22l5-3 5 3-1.2-8.5',
   tag:'M20.6 13.4l-7.2 7.2a2 2 0 01-2.8 0L2 12V2h10l8.6 8.6a2 2 0 010 2.8zM7 7h.01',
+  coin:'M12 2a10 10 0 100 20 10 10 0 000-20zM12 6v12M14.6 8.6a2.6 2 0 00-2.6-1.6c-1.7 0-2.8 1-2.8 2.2 0 2.9 5.6 1.6 5.6 4.5 0 1.3-1.2 2.4-3 2.4a2.8 2 0 01-2.8-1.7',
+  bank:'M3 10h18M5 10v8M19 10v8M9.5 10v8M14.5 10v8M2 21h20M12 3l9 5H3z',
+  receipt:'M5 2h14v20l-2.5-1.8L14 22l-2-1.8L10 22l-2.5-1.8L5 22zM9 7h6M9 11h6M9 15h4',
+  pie:'M21 12a9 9 0 11-9-9M12 3v9h9',
+  bars:'M3 3v18h18M8 17v-5M13 17V8M18 17v-9',
+  gift:'M20 12v8a1 1 0 01-1 1H5a1 1 0 01-1-1v-8M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z',
+  wallet:'M3 7a2 2 0 012-2h13a1 1 0 011 1v2M3 7v11a2 2 0 002 2h14a1 1 0 001-1v-3M17 11h4v5h-4a2.5 2.5 0 010-5z',
 };
 
 function Icon({ name, size = 18, sw = 2, fill, color, style }) {
@@ -220,7 +227,7 @@ function buildTicketCanvas(ticket, qrSel = '.ticket-qr') {
   const hH = 188;
   ctx.save(); roundRectPath(ctx, cardL, cardTop, cardW, hH, 26); ctx.clip();
   const g = ctx.createLinearGradient(cardL, cardTop, cardL + cardW, cardTop + hH);
-  g.addColorStop(0, '#023d2e'); g.addColorStop(1, '#00684a');
+  g.addColorStop(0, '#17324f'); g.addColorStop(1, '#2c5f92');
   ctx.fillStyle = g; ctx.fillRect(cardL, cardTop, cardW, hH); ctx.restore();
   ctx.textAlign = 'center';
   ctx.fillStyle = 'rgba(255,255,255,.78)'; ctx.font = "700 17px Archivo, sans-serif";

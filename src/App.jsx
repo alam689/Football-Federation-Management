@@ -12,6 +12,7 @@ import './screens/46-screens-federation.jsx';
 import './screens/47-screens-coaching.jsx';
 import './screens/48-screens-competition.jsx';
 import './screens/49-screens-sponsorship.jsx';
+import './screens/50-screens-finance.jsx';
 
 import React from 'react';
 import { Routes, Route, Navigate, useNavigate, useLocation, useParams, matchPath } from 'react-router-dom';
@@ -27,6 +28,7 @@ const {
   Fixtures, MatchCenter, Records, Clubs, Referees, Governance, Analytics, Roadmap,
   CompetitionMgmt, ETicketing, SportsScience, Infrastructure, Archive, PlayerHunt,
   BFFCommittees, Regulations, CoachingCourses, Sponsorship,
+  RevenueOverview, FinanceContracts, GrantsFunding,
 } = window;
 
 /* view key → { path, component }. Order mirrors the sidebar. */
@@ -51,6 +53,9 @@ const VIEWS = {
   sportsci:       { path: '/sportsci',          Comp: SportsScience },
   analytics:      { path: '/analytics',         Comp: Analytics },
   sponsorship:    { path: '/sponsorship',       Comp: Sponsorship },
+  revenue:        { path: '/revenue',           Comp: RevenueOverview },
+  contracts:      { path: '/contracts',         Comp: FinanceContracts },
+  grants:         { path: '/grants',            Comp: GrantsFunding },
   committees:     { path: '/committees',        Comp: BFFCommittees },
   regulations:    { path: '/regulations',       Comp: Regulations },
   roadmap:        { path: '/roadmap',            Comp: Roadmap },
@@ -62,12 +67,13 @@ const NAV = [
   { group: 'Football Management', items: [['search', 'Player Search', 'search'], ['management', 'Player Registration', 'user'], ['hunt', 'Player Hunt', 'star'], ['teams', 'National Teams', 'shield'], ['archive', 'Players Archive', 'history'], ['clubs', 'Clubs & Licensing', 'building'], ['referees', 'Referees', 'whistle'], ['governance', 'Transfers & Discipline', 'cards']] },
   { group: 'Competition', items: [['competitions', 'Competitions', 'table'], ['fixtures', 'Fixtures', 'cal'], ['matchcenter', 'Match Center', 'ball'], ['ticketing', 'E-Ticketing', 'ticket'], ['records', 'Records & Stats', 'trophy']] },
   { group: 'Development & Analytics', items: [['development', 'Development', 'flow'], ['coaching', 'Coaching Management', 'cap'], ['sportsci', 'Sports Science', 'health'], ['analytics', 'Analytics', 'trend']] },
+  { group: 'Finance & Revenue', items: [['revenue', 'Revenue Overview', 'coin'], ['contracts', 'Contracts & Receivables', 'wallet'], ['grants', 'Grants & Funding', 'bank']] },
   { group: 'Federation', items: [['sponsorship', 'Sponsorship', 'tag'], ['committees', 'BFF Committees', 'users'], ['regulations', 'Regulations & Legal', 'doc']] },
   { group: 'Digital Ecosystem', items: [['roadmap', 'Digital Strategy', 'globe'], ['infrastructure', 'Infrastructure', 'server']] },
 ];
 
-const TWEAK_DEFAULTS = { themeHex: '#00684a', mode: 'light', density: 'regular', font: 'Archivo' };
-const THEME_BY_HEX = { '#00684a': 'green', '#ee2939': 'red', '#0e6b8c': 'ink' };
+const TWEAK_DEFAULTS = { themeHex: '#2c5f92', mode: 'light', density: 'regular', font: 'Archivo' };
+const THEME_BY_HEX = { '#2c5f92': 'blue', '#475569': 'slate', '#0f766e': 'teal' };
 
 const pathForView = (view, param) => {
   const def = VIEWS[view];
@@ -128,7 +134,7 @@ export default function App() {
   }, [role]);
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', THEME_BY_HEX[(t.themeHex || '').toLowerCase()] || 'green');
+    document.documentElement.setAttribute('data-theme', THEME_BY_HEX[(t.themeHex || '').toLowerCase()] || 'blue');
     document.documentElement.setAttribute('data-mode', t.mode);
     document.documentElement.setAttribute('data-density', t.density);
     document.documentElement.style.setProperty('--ff-display', `'${t.font}', system-ui, sans-serif`);
@@ -213,7 +219,7 @@ export default function App() {
 
       <TweaksPanel>
         <TweakSection label="Brand theme" />
-        <TweakColor label="Accent" value={t.themeHex} options={['#00684a', '#ee2939', '#0e6b8c']} onChange={(v) => setTweak('themeHex', v)} />
+        <TweakColor label="Accent" value={t.themeHex} options={['#2c5f92', '#475569', '#0f766e']} onChange={(v) => setTweak('themeHex', v)} />
         <TweakRadio label="Mode" value={t.mode} options={['light', 'dark']} onChange={(v) => setTweak('mode', v)} />
         <TweakSection label="Layout" />
         <TweakRadio label="Density" value={t.density} options={['compact', 'regular', 'comfy']} onChange={(v) => setTweak('density', v)} />

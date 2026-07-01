@@ -13,7 +13,7 @@ const SESSION_KEY = 'bff_session';
 const ROLES = {
   admin: {
     id:'admin', label:'Federation Admin', sub:'Full system access · BFF secretariat',
-    icon:'shield', color:'#00684a', home:'dashboard',
+    icon:'shield', color:'#2c5f92', home:'dashboard',
     allow:'*',
     user:{ name:'A. Karim', dept:'Technical Department', initials:'AK' },
   },
@@ -37,7 +37,7 @@ const ROLES = {
   },
   fan: {
     id:'fan', label:'Public / Fan', sub:'Browse teams, fixtures, records & buy tickets',
-    icon:'user', color:'#ee2939', home:'dashboard',
+    icon:'user', color:'#475569', home:'dashboard',
     allow:['dashboard','search','profile','teams','archive','hunt','fixtures','matchcenter','records','ticketing','coaching','sponsorship','committees','regulations'],
     user:{ name:'Guest Supporter', dept:'Public Portal', initials:'GS' },
   },
@@ -130,7 +130,7 @@ function LoginScreen({ onLogin }) {
       {/* brand panel */}
       <div style={{ background:'linear-gradient(150deg, var(--primary-deep), var(--primary))', color:'#fff', padding:'56px 60px', display:'flex', flexDirection:'column', justifyContent:'space-between', position:'relative', overflow:'hidden' }}>
         <div style={{ position:'absolute', right:-80, top:-80, width:320, height:320, borderRadius:'50%', background:'rgba(255,255,255,.06)' }}></div>
-        <div style={{ position:'absolute', right:30, bottom:-90, width:240, height:240, borderRadius:'50%', background:'rgba(238,41,57,.22)' }}></div>
+        <div style={{ position:'absolute', right:30, bottom:-90, width:240, height:240, borderRadius:'50%', background:'rgba(70,128,180,.28)' }}></div>
         <div className="row" style={{ gap:14, position:'relative' }}>
           <div className="brand-logo" style={{ width:48, height:48 }}><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3.2l3.6 2.6-1.4 4.3H9.8L8.4 7.8 12 5.2z"/></svg></div>
           <div><div style={{ fontFamily:'var(--ff-display)', fontWeight:800, fontSize:18 }}>Bangladesh Football</div><div style={{ fontSize:12, opacity:.8, letterSpacing:'.14em', textTransform:'uppercase' }}>Federation · BFF</div></div>

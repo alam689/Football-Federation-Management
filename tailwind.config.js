@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bff-green': '#00684a',
-        'bff-green-deep': '#023d2e',
-        'bff-red': '#ee2939',
-        'bff-gold': '#e3a72f',
+        // Token names kept stable; values carry the international palette.
+        'bff-green': '#2c5f92',
+        'bff-green-deep': '#17324f',
+        'bff-red': '#d23b46',
+        'bff-gold': '#c98a1f',
       },
       fontFamily: {
         display: ['Archivo', 'system-ui', 'sans-serif'],

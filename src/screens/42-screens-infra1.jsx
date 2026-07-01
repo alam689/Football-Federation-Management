@@ -19,9 +19,9 @@ const {
 /* ---------- Competition Management (+ VAR & goal-line tech) ---------- */
 /* ---- New competition form ---- */
 function CompetitionForm({ onSubmit, onClose }) {
-  const colors = ['#006a4e', '#ee2737', '#1f6feb', '#8a5cf6', '#f59e0b', '#0ea5a3'];
+  const colors = ['#2c5f92', '#1f6feb', '#0f766e', '#8a5cf6', '#f59e0b', '#0ea5a3'];
   const [f, setF] = React.useState({
-    name:'', short:'', type:'League', teams:'', total:'', round:'', leader:'', season:'2025–26', status:'Upcoming', color:'#006a4e',
+    name:'', short:'', type:'League', teams:'', total:'', round:'', leader:'', season:'2025–26', status:'Upcoming', color:'#2c5f92',
   });
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
   const submit = async () => {

@@ -818,7 +818,7 @@ function Heatmap({ seed = 1 }) {
   }
   const heat = (v) => v<0.15?'transparent':`rgba(${238-Math.round(v*60)},${Math.round(180-v*150)},${Math.round(60-v*40)},${0.25+v*0.6})`;
   return (
-    <div style={{ background:'linear-gradient(90deg,#0a7d5b,#0c8865)', borderRadius:10, padding:8, position:'relative', aspectRatio:'3/2', backgroundImage:'repeating-linear-gradient(90deg,#0a7d5b 0 calc(100%/6),#0c8865 calc(100%/6) calc(100%/3))' }}>
+    <div style={{ background:'linear-gradient(90deg,#2c5f92,#34719f)', borderRadius:10, padding:8, position:'relative', aspectRatio:'3/2', backgroundImage:'repeating-linear-gradient(90deg,#2c5f92 0 calc(100%/6),#34719f calc(100%/6) calc(100%/3))' }}>
       <div style={{ position:'absolute', inset:8, border:'2px solid #ffffff44', borderRadius:6 }}></div>
       <div style={{ position:'absolute', left:'50%', top:8, bottom:8, width:2, background:'#ffffff33' }}></div>
       <div style={{ display:'grid', gridTemplateColumns:`repeat(${cols},1fr)`, gridTemplateRows:`repeat(${rows},1fr)`, height:'100%', position:'relative' }}>
